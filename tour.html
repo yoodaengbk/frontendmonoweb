@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <title>TOUR</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="tour-style.css">
+  <script  src="bootstrap/js/jquery.min.js"></script>
+  <script  src="bootstrap/js/popper.min.js"></script>
+  <script  src="bootstrap/js/bootstrap.min.js"></script>
+  <script  src="myScript.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light   " id="navbar">
+      <a class="navbar-brand text-center col-3  ml-auto" href="index.html">
+        <img width="120"  class="header-logo" src="images/mona-logo2.png" alt="...">
+      </a>
+      <button class="navbar-toggler d-lg-none ml-auto" type="button" data-toggle="collapse"
+        data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ml-auto " id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto ">
+          <li class="nav-item active">
+            <a class="nav-link text-dark" href="index.html">TRANG CHỦ <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="gioithieu.html">GIỚI THIỆU</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="dropdownId" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">TOUR NỘI ĐỊA</a>
+            <div class="dropdown-menu " aria-labelledby="dropdownId">
+              <a class="dropdown-item " href="#">DU LỊCH MIỀN BẮC</a>
+              <a class="dropdown-item " href="#">DU LỊCH MIỀN TRUNG</a>
+              <a class="dropdown-item " href="#">DU LỊCH MIỀN NAM</a>
+
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="lienhe.html">LIÊN HỆ</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 mr-auto">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0 text-dark" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3 col-md-3">
+        <div class="left-1">
+          <b>DANH MỤC SẢN PHẨM</b>
+          <nav class="nav flex-column">
+            <a class="nav-link" href="index.html">Trang chủ</a>
+            <a class="nav-link" href="#">Du lịch trong nước</a>
+            <a class="nav-link" href="#">Du lịch nước ngoài</a>
+            <a class="nav-link" href="#">Khác sạn</a>
+          </nav>
+        </div>
+        <div class="left-2">
+          <b>Chọn mức giá:</b>
+          <div class="slidecontainer">
+            <input type="range" min="1000000" max="10000000" value="2000000" class="slider" id="myRange">
+            <p>Mức giá: <span id="demo"></span>đ</p>
+          </div>
+          <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value * 100000;
+            slider.oninput = function () {
+              output.innerHTML = this.value * 100000;
+            }
+          </script>
+          <input class="btn btn-secondary" type="submit" value="Lọc">
+        </div>
+        <div class="left-3">
+          <b>Nơi khởi hành</b>
+          <nav class="nav flex-column">
+            <a class="nav-link" href="#">Hà Nội</a>
+            <a class="nav-link" href="#">Đà Nẵng</a>
+            <a class="nav-link" href="#">TP.Hồ Chí Minh</a>
+          </nav>
+        </div>
+      </div>
+      <div class="col-9 col-md-9">
+        <div class="row" style=" margin: 0 auto;">
+
+          <div class="col-12 col-md-6 col-lg-4 ">
+            <div class="card mb-2">
+              <img class="card-img-top" src="images/quynhon.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Biển Quy Nhơn</h5>
+                <p class="card-text">Quy Nhơn – Bình Định thuộc khu vực duyên hải Nam Trung Bộ của Việt Nam. Nơi đây có
+                  rất nhiều bãi tắm đẹp và thơ mộng đầy cát trắng.</p>
+                <a href="product.html" class="btn btn-primary stretched-link">4.900.000đ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 ">
+            <div class="card mb-2">
+              <img class="card-img-top" src="images/phuquoc.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Phú Quốc</h5>
+                <p class="card-text">Phú Quốc còn được mệnh danh là Đảo Ngọc, là hòn đảo lớn nhất của nước Việt Nam,
+                  cũng là đảo lớn nhất trong quần thể 22 đảo tại đây.</p>
+                <a href="product.html" class="btn btn-primary stretched-link">3.900.000đ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 ">
+            <div class="card mb-2">
+              <img class="card-img-top" src="images/nhatrang.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Nha Trang</h5>
+                <p class="card-text">Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa,
+                  khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa.</p>
+                <a href="product.html" class="btn btn-primary stretched-link">4.900.000đ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 ">
+            <div class="card mb-2">
+              <img class="card-img-top" src="images/mocchau.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Đồi chè Mộc Châu</h5>
+                <p class="card-text">Mộc Châu là một huyện của tỉnh Sơn La, Việt Nam-Nơi có các cánh đồng chè đẹp lung
+                  linh. Du khách có thể tham quan cũng như trải nghiệm trực tiếp công việc hái chè.</p>
+                <a href="product.html" class="btn btn-primary stretched-link">6.900.000đ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 ">
+            <div class="card mb-2">
+              <img class="card-img-top" src="images/halong.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Hạ Long</h5>
+                <p class="card-text">Vịnh Hạ Long là một vịnh nhỏ thuộc phần bờ tây vịnh Bắc Bộ tại khu vực biển Đông
+                  Bắc Việt Nam, bao gồm vùng biển đảo thuộc thành phố Hạ Long-Quảng Ninh.</p>
+                <a href="product.html" class="btn btn-primary stretched-link">4.900.000đ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 ">
+            <div class="card mb-2">
+              <img class="card-img-top" src="images/danang.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Cầu Vàng</h5>
+                <p class="card-text">Đà Nẵng là một thành phố trực thuộc trung ương, nằm trong vùng Duyên hải Nam Trung
+                  Bộ Việt Nam, là thành phố trung tâm và lớn nhất khu vực miền Trung - Tây Nguyên.</p>
+                <a href="product.html" class="btn btn-primary stretched-link">5.999.999đ</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ads">
+            <p><b><i><u>CÁC TOUR KHUYỄN MÃI</u></i></b></p>
+          </div>
+
+          <div class="row mr-auto ml-auto">
+            <div class="col-12 col-md-6 col-lg-4 mr-auto ml-auto">
+              <div class="card mb-2" style="width: 110%;">
+                <img class="card-img-top" src="images/family.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Combo du lịch cho gia đình 4 người</h5>
+                  <p class="card-text">Combo Cát Bà 3N2Đ: Du thuyền Heritage 5* + Flamingo Cát Bà Beach Resort 5*</p>
+                  <a href="#" class="btn btn-primary stretched-link">9.900.000đ</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mr-auto ml-auto">
+              <div class="card mb-2" style="width: 110%;">
+                <img class="card-img-top" src="images/company.jpg" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">Combo cho đoàn, tổ chức 15 20 người</h5>
+                  <p class="card-text">Combo Nha Trang 3N2Đ: Vinpearl Condotel Beachfront 5*+Vé máy bay + Vui chơi</p>
+                  <a href="#" class="btn btn-primary stretched-link">22.900.000đ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="sumary ml-auto mr-auto" style="width: 98%; color: aliceblue; padding-top: 25px;">
+      <div class="row col-10 ml-auto mr-auto">
+        <div class="col-md-4 footer-col ">
+          <div class="list-group">
+            <div class="footer-logo">
+              <img src="images/logo-while.png" width="200" alt="..." >
+            </div>
+            <p class="address">
+              <span>
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-geo-alt" fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M12.166 8.94C12.696 7.867 13 6.862 13 6A5 5 0 0 0 3 6c0 .862.305 1.867.834 2.94.524 1.062 1.234 2.12 1.96 3.07A31.481 31.481 0 0 0 8 14.58l.208-.22a31.493 31.493 0 0 0 1.998-2.35c.726-.95 1.436-2.008 1.96-3.07zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                  <path fill-rule="evenodd" d="M8 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg></span>
+              268 Lý Thường Kiệt, Phường 14, Quận 10, Thành phố Hồ Chí Minh</p>
+            <p class="phone"> <span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill"
+                  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z" />
+                </svg></span> 0123456789</p>
+
+            <p class="email"><span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill"
+                  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+                </svg></span> mona_support@mona.com</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h6>Menu</h6>
+          <div class="menu-footer">
+            <ul>
+              <li><a href="#">Giới thiệu</a></li>
+              <li><a href="#">Du lịch trong nước</a></li>
+              <li><a href="#">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h6>Tour phổ biến</h6>
+          <div class="row">
+            <div class="col-4">
+              <a href="#"><img src="images/coco2.jpg" alt="" style="max-width:100%;
+                          max-height:100%;"></a>
+            </div>
+            <div class="col-4">
+              <a href="#"><img src="images/1057_deo_hai_van.jpg" alt="" style="max-width:100%;
+                          max-height:100%;"></a>
+            </div>
+            <div class="col-4">
+              <a href="#"><img src="images/travlec.jpg" alt="" style="max-width:100%;
+                          max-height:100%;"></a>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-4">
+              <a href="#"><img src="images/bana5.jpg" alt="" style="max-width:100%;
+                          max-height:100%;"></a>
+            </div>
+            <div class="col-4">
+              <a href="#"><img src="images/lang-hoa.jpg" alt="" style="max-width:100%;
+                          max-height:100%;"></a>
+            </div>
+            <div class="col-4">
+              <a href="#"><img src="images/hue.jpg" alt="" style="max-width:100%;
+                          max-height:100%;"></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+   
+
+      <hr style="height:2px;border-width:0;color:gray;background-color:gray;margin: 10px 10%;" />
+
+    
+    <div>
+      <br>
+    </div>
+  </footer>
+  
+</body>
+
+</html>
